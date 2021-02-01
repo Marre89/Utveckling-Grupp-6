@@ -7,7 +7,6 @@ public class Contact {
     private String eMail;
     
     public Contact(String name, String lastName, String address, int phoneNumber, String eMail) {
-        super();
         this.name = name;
         this.lastName = lastName;
         this.address = address;
