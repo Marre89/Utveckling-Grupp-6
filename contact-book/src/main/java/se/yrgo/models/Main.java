@@ -1,4 +1,4 @@
-package se.yrgo.ui;
+package se.yrgo.models;
 
 public class Main {
 
