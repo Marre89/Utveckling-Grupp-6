@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 class ContactTest {
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	public void test() {
+	    Contact contact = new Contact("John", "Johnsson", "Jacobs gata 22", "072-22 49 16", "john@email.com");
 	}
-
+//	(String name, String lastName, String address, int phoneNumber, String eMail)
 }
