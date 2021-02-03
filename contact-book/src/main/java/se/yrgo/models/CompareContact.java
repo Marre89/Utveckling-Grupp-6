@@ -5,6 +5,15 @@ public class CompareContact extends Contact{
 		super(name, lastName, address, phoneNumber, eMail);
 		// TODO Auto-generated constructor stub
 	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+	    int result = 1;
+	    result = prime * result + ((geteMail() == null) ? 0 : geteMail().hashCode());
+	    result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
+	    return result;
+	}
 
 	@Override
     public boolean equals(Object obj) {
@@ -20,10 +29,10 @@ public class CompareContact extends Contact{
         } else if (!getName().equals(other.getName()))
             return false;
         
-        if (getPhoneNumber() == null) {
-            if (other.getPhoneNumber() != null)
+        if (geteMail() == null) {
+            if (other.geteMail() != null)
                 return false;
-        } else if (!getPhoneNumber().equals(other.getPhoneNumber()))
+        } else if (!geteMail().equals(other.geteMail()))
             return false;
         
        return true;       
