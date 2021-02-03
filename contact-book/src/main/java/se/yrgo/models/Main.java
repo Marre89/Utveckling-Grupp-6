@@ -14,11 +14,12 @@ public class Main {
         	do {
         
             System.out.println("What do you want to do?");
-            System.out.println("1. List Contacts/2.Find Contact/3. Add New Contact/4. Delete Contact ");
+            System.out.println("1. List Contacts/2.Find Contact/3. Add New Contact/4. Delete Contact/5. Exit");
             choice = scan.nextInt();
             
             switch(choice){
             	case 1:
+            		System.out.println("All Contacts:");
             		cb.showContacts();    //This case is supposed to get all contacts.
                 break;
             	case 2:
@@ -59,6 +60,8 @@ public class Main {
             			System.out.println("Contact does not exist.");
             		}
                 break;
+            	case 5:
+            		System.exit(1);
             	default:
             		System.out.println("Bro, wtf!.");
                 break;

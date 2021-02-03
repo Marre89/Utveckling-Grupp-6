@@ -8,8 +8,8 @@ public class ContactBook {
 	private int nextPosition = 0;
 
 	public void showContacts() {
-		for(int i = 0; i < contactArray.length; i++) {
-			System.out.println(contactArray[i] + " ");
+		for(int i = 0; i < nextPosition; i++) {
+			System.out.println(contactArray[i] + "");
 		}
 	}
 	
