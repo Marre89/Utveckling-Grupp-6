@@ -9,15 +9,15 @@ public class Main {
 		ContactBook cb = new ContactBook();
         Scanner scan = new Scanner(System.in);
         
-        int choice;
+        int choice = 0;
         try{
         	do {
         
             System.out.println("What do you want to do?");
-            System.out.println("1. List Contacts/2.Find Contact/3. Add New Contact/4. Delete Contact/5. Exit");
+            System.out.printf("1.List Contacts %n2.Find Contact %n3.Add New Contact %n4.Delete Contact %n5.Exit");
             choice = scan.nextInt();
             
-            switch(choice){
+            switch(choice) {
             	case 1:
             		System.out.println("All Contacts:");
             		cb.showContacts();    //This case is supposed to get all contacts.
@@ -63,7 +63,7 @@ public class Main {
             	case 5:
             		System.exit(1);
             	default:
-            		System.out.println("Bro, wtf!.");
+            		System.out.println("Not a valid option");
                 break;
             }
             
