@@ -1,15 +1,16 @@
 package se.yrgo.models;
 
-import java.util.Arrays; //koss
+import java.util.Arrays; 
 
 public class ContactBook {
 
-	private Contact[] contactArray = new Contact[100];
+	private Contact[] contactArray = new Contact[10];
 	private int nextPosition = 0;
 
-	public String getContactArray() {
-		String returnArrayInString = Arrays.toString(contactArray);
-		return returnArrayInString;
+	public void showContacts() {
+		for(int i = 0; i < contactArray.length; i++) {
+			System.out.println(contactArray[i] + " ");
+		}
 	}
 	
 	public int getNumberOfContacts() {
