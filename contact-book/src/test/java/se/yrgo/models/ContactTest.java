@@ -6,6 +6,12 @@ import org.junit.jupiter.api.Test;
 
 class ContactTest {
 
+	/**
+	 * @param  these tests compare two equal and two not equal contacts
+	 * 
+	 * */
+	
+	
     @Test
     public void test2EqualContacts() {
         Contact contact1 = new Contact("John", "Smith", "Jacobs gata 22", "072-22 49 16", "john@email.com");
