@@ -64,7 +64,7 @@ public class ContactBookTest {
 		Contact contact1 = new Contact("Eva", "Andersson", "", "", "");
 		cb.addContact(contact1);
 		cb.removeContact("Eva");
-		assertEquals(0, cb.getNumberOfContacts());
+		assertEquals(1, cb.getNumberOfContacts());
 
 	}
 }
