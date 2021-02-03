@@ -31,7 +31,7 @@ public class ContactBookTest {
 			assertEquals(cb.findContact("Eva"), contact1.getName());
 		} catch (ContactNotFoundException e) {
 
-			e.printStackTrace();
+			System.out.println("Contact does not exist.");
 		}
 	}
 
@@ -42,7 +42,7 @@ public class ContactBookTest {
 		try {
 			assertEquals(contact1.getName().toUpperCase(), cb.findContact("Eva"));
 		} catch (ContactNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("Contact does not exist.");
 		}
 
 	}
@@ -54,7 +54,7 @@ public class ContactBookTest {
 		try {
 			assertEquals(contact1.getName().trim(), cb.findContact("Eva"));
 		} catch (ContactNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("Contact does not exist.");
 		}
 	}
 
@@ -63,11 +63,8 @@ public class ContactBookTest {
 		ContactBook cb = new ContactBook();
 		Contact contact1 = new Contact("Eva", "Andersson", "", "", "");
 		cb.addContact(contact1);
-		try {
-			cb.removeContact("Eva");
-		} catch (ContactNotFoundException e) {
-			e.printStackTrace();
-		}
+		cb.removeContact("Eva");
 		assertEquals(0, cb.getNumberOfContacts());
+
 	}
 }
