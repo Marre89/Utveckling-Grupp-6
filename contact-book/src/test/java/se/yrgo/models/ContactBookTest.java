@@ -63,11 +63,8 @@ public class ContactBookTest {
 		ContactBook cb = new ContactBook();
 		Contact contact1 = new Contact("Eva", "Andersson", "", "", "");
 		cb.addContact(contact1);
-		try {
-			cb.removeContact("Eva");
-		} catch (ContactNotFoundException e) {
-			System.out.println("Contact does not exist.");
-		}
+		cb.removeContact("Eva");
 		assertEquals(0, cb.getNumberOfContacts());
+
 	}
 }
