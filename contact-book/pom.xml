@@ -33,7 +33,7 @@
                 <archive>
                     <manifest>
                 	 <mainClass>
-                		se.yrgo.models.App
+                		se.yrgo.models.Main
                 	</mainClass>
                    </manifest>
                 </archive>
