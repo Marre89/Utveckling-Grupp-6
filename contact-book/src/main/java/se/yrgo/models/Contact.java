@@ -13,7 +13,7 @@ public class Contact extends CompareContact{
      * */
 
     public Contact(String name, String lastName, String address, String phoneNumber, String eMail) {
-        super(name, lastName, eMail);
+    	super(name, lastName, eMail);
     	this.name = name;
         this.lastName = lastName;
         this.address = address;
