@@ -1,5 +1,5 @@
 package se.yrgo.models;
 
-public class Main {
+public class App {
 
 }
