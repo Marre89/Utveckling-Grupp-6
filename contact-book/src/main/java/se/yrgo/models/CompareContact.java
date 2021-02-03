@@ -1,17 +1,23 @@
 package se.yrgo.models;
 
-public class CompareContact extends Contact{
-	public CompareContact(String name, String lastName, String address, String phoneNumber, String eMail) {
-		super(name, lastName, address, phoneNumber, eMail);
-		// TODO Auto-generated constructor stub
+public abstract class CompareContact {
+	private String name;
+	private String lastName;
+	private String eMail;
+	
+	public CompareContact(String name, String lastName, String eMail) {
+		this.name = name;
+		this.lastName = lastName;
+		this.eMail = eMail;
 	}
 	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 	    int result = 1;
-	    result = prime * result + ((geteMail() == null) ? 0 : geteMail().hashCode());
-	    result = prime * result + ((getName() == null) ? 0 : getName().hashCode());
+	    result = prime * result + ((name == null) ? 0 : name.hashCode());
+	    result = prime * result + ((lastName == null) ? 0 : name.hashCode());
+	    result = prime * result + ((eMail == null) ? 0 : eMail.hashCode());
 	    return result;
 	}
 
@@ -23,16 +29,22 @@ public class CompareContact extends Contact{
             return false;        
         Contact other = (Contact) obj;
         
-        if (getName() == null) {
+        if (name == null) {
             if (other.getName() != null)
                 return false;
-        } else if (!getName().equals(other.getName()))
+        } else if (!name.equals(other.getName()))
             return false;
         
-        if (geteMail() == null) {
+        if (lastName == null) {
+            if (other.getLastName() != null)
+                return false;
+        } else if (lastName.equals(other.getLastName()))
+            return false;
+        
+        if (eMail == null) {
             if (other.geteMail() != null)
                 return false;
-        } else if (!geteMail().equals(other.geteMail()))
+        } else if (!eMail.equals(other.geteMail()))
             return false;
         
        return true;       

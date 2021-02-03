@@ -7,8 +7,13 @@ import org.junit.jupiter.api.Test;
 class CompareContactTest {
 
 	@Test
-	void test() {
-		assertEquals(1, 1);
+	void CompareContactNullTest() {
+		assertFalse(equals(null));
 	}
 
+
+	@Test
+	public void tester() {
+		
+	}
 }
