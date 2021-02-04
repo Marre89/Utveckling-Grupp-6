@@ -3,12 +3,15 @@ package se.yrgo.models;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+/**
+ * Main method creates a text-based contact book option menu, you can choose how you want to interact with the ContactBook.
+ * Following options are: 1.List all contacts; 2.Find Contact; 3.Add New Contact; 4.Delete Contact or 5.Exit
+ * 
+ * */
+
 public class Main {
 	public static void main(String[] args) {
-		/**
-		 * @param  these tests compare two equal and two not equal contacts
-		 * 
-		 * */
+	
 		ContactBook cb = new ContactBook();
         Scanner scan = new Scanner(System.in);
         

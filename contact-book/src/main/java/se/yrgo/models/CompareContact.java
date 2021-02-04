@@ -3,10 +3,12 @@ package se.yrgo.models;
 public abstract class CompareContact {
 	private String name;
 	private String eMail;
+	
 	/**
 	 * @param  these tests compare two equal and two not equal contacts
 	 * 
 	 * */
+	
 	public CompareContact(String name, String eMail) {
 		this.name = name;
 		this.eMail = eMail;
@@ -43,8 +45,8 @@ public abstract class CompareContact {
 		return true;
 	}
 	
-	/*This hashcode() & equals() method only checks for the and name email. 
-	//More should not be necessary as that would imply a faulty database.
+	/**This hashCode() & equals() method only checks for the and name email. 
+	More should not be necessary as that would imply a faulty database.
 	*/
 
 }
