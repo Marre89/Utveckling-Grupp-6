@@ -51,5 +51,7 @@ public abstract class CompareContact {
 	/*This hashcode() & equals() method only checks for the first name, last name and the email. 
 	//More should not be necessary as that would imply a faulty database.
 	*/
+	
+	// test 
 
 }
