@@ -5,7 +5,10 @@ import java.util.Scanner;
 
 public class Main {
 	public static void main(String[] args) {
-		
+		/**
+		 * @param  these tests compare two equal and two not equal contacts
+		 * 
+		 * */
 		ContactBook cb = new ContactBook();
         Scanner scan = new Scanner(System.in);
         
@@ -14,7 +17,7 @@ public class Main {
         	do {
         
             System.out.println("What do you want to do?");
-            System.out.printf("1.List Contacts %n2.Find Contact %n3.Add New Contact %n4.Delete Contact %n5.Exit");
+            System.out.printf("1.List Contacts %n2.Find Contact %n3.Add New Contact %n4.Delete Contact %n5.Exit%n");
             choice = scan.nextInt();
             
             switch(choice) {
@@ -23,7 +26,7 @@ public class Main {
             		cb.showContacts();    //This case is supposed to get all contacts.
                 break;
             	case 2:
-            		System.out.println("Please enter the first name of the contact you are looking for: ");
+            		System.out.println("Please enter Fullname of the contact you are looking for: ");
             		scan.skip("\r\n");
             		String searchName = scan.nextLine();
             		try {
@@ -33,24 +36,22 @@ public class Main {
             		}
                 break;
             	case 3:
-            		System.out.println("Please enter the first name: ");
+            		System.out.println("Please enter the full name: ");
                 		scan.skip("\r\n");
-                		String name = scan.nextLine();						//Program asks for firstname and lastname at the same time when it runs. Don't know why.
-                	System.out.println("Please enter the last name: ");
-                		String lastName = scan.nextLine();
+                		String name = scan.nextLine();						
                 	System.out.println("Please enter an adress: ");
                 		String address = scan.nextLine();
                 	System.out.println("Please enter a phone number: ");
                 		String phoneNumber = scan.nextLine();
                 	System.out.println("Please enter an email: ");
                 		String eMail = scan.nextLine();
-                		Contact newContact = new Contact(name, lastName, address, phoneNumber, eMail);
+                		Contact newContact = new Contact(name, address, phoneNumber, eMail);
                 		cb.addContact(newContact);
                 		System.out.println("Contact added.");
                 
                 break;
             	case 4:
-            		System.out.println("Please enter the first name of the contact you want to delete");
+            		System.out.println("Please enter the fullname of the contact you want to delete");
             		scan.skip("\r\n");
             		String removeName = scan.nextLine();
             		try {
@@ -69,7 +70,7 @@ public class Main {
             
         }while (choice != 0);
         } catch (InputMismatchException e) {
-        	System.out.println("Bro, wtf?");
+        	System.out.println("not valid input");
         }
      }
 }

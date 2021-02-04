@@ -2,12 +2,13 @@ package se.yrgo.models;
 
 public abstract class CompareContact {
 	private String name;
-	private String lastName;
 	private String eMail;
-	
-	public CompareContact(String name, String lastName, String eMail) {
+	/**
+	 * @param  these tests compare two equal and two not equal contacts
+	 * 
+	 * */
+	public CompareContact(String name, String eMail) {
 		this.name = name;
-		this.lastName = lastName;
 		this.eMail = eMail;
 	}
 
@@ -16,7 +17,6 @@ public abstract class CompareContact {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((eMail == null) ? 0 : eMail.hashCode());
-		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
@@ -35,11 +35,6 @@ public abstract class CompareContact {
 				return false;
 		} else if (!eMail.equals(other.eMail))
 			return false;
-		if (lastName == null) {
-			if (other.lastName != null)
-				return false;
-		} else if (!lastName.equals(other.lastName))
-			return false;
 		if (name == null) {
 			if (other.name != null)
 				return false;
@@ -48,7 +43,7 @@ public abstract class CompareContact {
 		return true;
 	}
 	
-	/*This hashcode() & equals() method only checks for the first name, last name and the email. 
+	/*This hashcode() & equals() method only checks for the and name email. 
 	//More should not be necessary as that would imply a faulty database.
 	*/
 

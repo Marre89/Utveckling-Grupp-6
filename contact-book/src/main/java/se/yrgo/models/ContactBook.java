@@ -1,9 +1,11 @@
 package se.yrgo.models;
 
-import java.util.Arrays; 
 
 public class ContactBook {
-
+	/**
+	 * @param  these tests compare two equal and two not equal contacts
+	 * 
+	 * */
 	private Contact[] contactArray = new Contact[10];
 	private int nextPosition = 0;
 
@@ -43,11 +45,10 @@ public class ContactBook {
 				for(int i = 0; i < nextPosition; i++) {
 					contactArray[i] = contactArray[i + 1];
 			
-				};
+				}
 				return  contactArray;
 			}
 		}
 		throw new ContactNotFoundException();
 	}
-
 }

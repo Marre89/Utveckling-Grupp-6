@@ -2,7 +2,6 @@ package se.yrgo.models;
 
 public class Contact extends CompareContact{
     private String name;
-    private String lastName;
     private String address;
     private String phoneNumber;
     private String eMail;
@@ -12,10 +11,9 @@ public class Contact extends CompareContact{
      * 
      * */
 
-    public Contact(String name, String lastName, String address, String phoneNumber, String eMail) {
-    	super(name, lastName, eMail);
+    public Contact(String name, String address, String phoneNumber, String eMail) {
+    	super(name, eMail);
     	this.name = name;
-        this.lastName = lastName;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.eMail = eMail;
@@ -27,14 +25,6 @@ public class Contact extends CompareContact{
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
     }
 
     public String getAddress() {
@@ -63,7 +53,7 @@ public class Contact extends CompareContact{
 
     @Override
     public String toString() {
-        return String.format("%s %s, %s, %s, %s", name, lastName, address, phoneNumber, eMail);
+        return String.format("%s %s, %s, %s, %s", name, address, phoneNumber, eMail);
     }
 
 }
