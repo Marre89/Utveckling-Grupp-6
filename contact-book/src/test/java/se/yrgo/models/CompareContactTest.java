@@ -6,8 +6,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
  public class CompareContactTest {
 	/**
-	 * @param  these tests compare two equal and two not equal contacts
-	 * 
+	 * @param  these tests compare two equal and two non equal contacts.
+	 * We also have a test that assures that the compared contact is false when null.
 	 * */
 	@Test
 	public void CompareContactNullTest() {

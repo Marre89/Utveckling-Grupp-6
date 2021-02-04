@@ -5,7 +5,7 @@ public abstract class CompareContact {
 	private String eMail;
 	
 	/**
-	 * @param  these tests compare two equal and two not equal contacts
+	 * @param  Here we have a hashCode() method and equals() method
 	 * 
 	 * */
 	
@@ -45,10 +45,11 @@ public abstract class CompareContact {
 		return true;
 	}
 	
-	/**This hashCode() & equals() method only checks for the and name email. 
-	More should not be necessary as that would imply a faulty database.
-	*/
+	/** 
+	 * This hashCode() & equals() method only checks for the and name email.
+	 * More should not be necessary as that would imply a faulty database.
+	 */
 	
-	// test 
+	
 
 }
