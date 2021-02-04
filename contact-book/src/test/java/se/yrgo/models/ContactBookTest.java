@@ -8,17 +8,19 @@ import org.junit.jupiter.api.Test;
 
 
 public class ContactBookTest {
-	/**
-	 * @param  these tests compare two equal and two not equal contacts
-	 * 
-	 * */
+
 
 	private ContactBook cb;
 	
 	public ContactBookTest() {
 		cb = new ContactBook();
 	}
-
+	
+	/**
+	 * Tests if it is possible to add a contact
+	 * 
+	 * */
+	
 	@Test
 	public void shouldAddContact() {
 		ContactBook cb = new ContactBook();
@@ -27,6 +29,11 @@ public class ContactBookTest {
 		assertEquals(1, cb.getNumberOfContacts());
 	}
 
+	/**
+	 * Tests if it is possible to find a contact
+	 * 
+	 * */
+	
 	@Test
 	public void shouldFindContact() {
 		try {
@@ -37,7 +44,12 @@ public class ContactBookTest {
 				e.getStackTrace();
 			}
 	}
-
+	
+	/**
+	 * Test for case sensitivity
+	 *  
+	 * */
+	
 	@Test
 	public void shouldIgnoreCase() {
 		try {
@@ -49,7 +61,12 @@ public class ContactBookTest {
 				e.getStackTrace();
 			}
 	}
-
+	
+	/**
+	 * Test for extra spaces in user input
+	 * 
+	 * */
+	
 	@Test
 	public void shouldIgnoreExtraSpaces() throws ContactNotFoundException {
 		try {
@@ -61,12 +78,19 @@ public class ContactBookTest {
 			}
 	}
 	
+	/**
+	 * Tests if it is possible to remove a contact
+	 * 
+	 * */
+	
 	@Test
 	public void removeContactTest() {
 			Contact contact1 = new Contact("Eva Andersson", "", "", "");
 			cb.addContact(contact1);
 			assertEquals(1, cb.getNumberOfContacts());
 }
+	
+	
 	@Test
 	public void contactNotFoundExeptionTest() {
 		assertThrows(ContactNotFoundException.class, () -> {

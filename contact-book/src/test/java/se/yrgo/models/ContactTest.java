@@ -11,7 +11,6 @@ class ContactTest {
 	 * 
 	 * */
 	
-	
     @Test
     public void test2EqualContacts() {
         Contact contact1 = new Contact("John Smith", "Jacobs gata 22", "072-22 49 16", "john@email.com");
@@ -27,8 +26,11 @@ class ContactTest {
     }
     
     /**
-     * @param These tests check different properties of a Contact class
+     * @param These tests check all different properties of a Contact class
+     * 
+     * 
      * */
+    
 	@Test
 	public void testContactemail() {
 		Contact email = new Contact("","","","andrea@email.com");
